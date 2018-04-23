@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="C# WPF　サンプル" Height="400" Width="600" Loaded="WindowOnLoaded">
+        Title="C# WPF　サンプル" Height="400" Width="600">
     <Grid>
         <TabControl Margin="10">
             <TabItem Header="シンプルなコントロール">
@@ -22,20 +22,21 @@
             <TabItem Header="ストップウォッチ" IsSelected="True">
                 <Grid Background="#FFE5E5E5">
                     <Label x:Name="StopwatchText" Content="00:00:00" Margin="10,10,10,0" VerticalAlignment="Top" FontFamily="Quartz MS" FontSize="72"/>
-                    <Button x:Name="StopButton" Content="Stop" Margin="0,291,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Click="StopButtonOnClick"/>
-                    <Button x:Name="StartButton" Content="Start" Margin="0,291,90,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Click="StartButtonOnClick"/>
-                    <Grid HorizontalAlignment="Left" Height="146" Margin="24,165,0,0" VerticalAlignment="Top" Width="294">
+                    <Button x:Name="StopButton" Content="Stop" Margin="0,0,10,10" HorizontalAlignment="Right" Width="75" Click="StopButtonOnClick" Height="20" VerticalAlignment="Bottom"/>
+                    <Button x:Name="StartButton" Content="Start" Margin="0,0,90,10" HorizontalAlignment="Right" Width="75" Click="StartButtonOnClick" Height="20" VerticalAlignment="Bottom"/>
+                    <Grid HorizontalAlignment="Left" Height="118" Margin="10,165,0,0" VerticalAlignment="Top" Width="546">
                         <Label Content="フレームカウント" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="FrameCounterText" Content="Label" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="164"/>
+                        <Label x:Name="FrameCounterText" Content="0" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="164"/>
                         <Label Content="経過ミリ秒" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="TotalMillisecondsText" Content="Label" HorizontalAlignment="Left" Margin="94,41,0,0" VerticalAlignment="Top" Width="164"/>
+                        <Label x:Name="TotalMillisecondsText" Content="0" HorizontalAlignment="Left" Margin="94,41,0,0" VerticalAlignment="Top" Width="164"/>
                         <Label Content="FPS" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="FPSText" Content="Label" HorizontalAlignment="Left" Margin="94,72,0,0" VerticalAlignment="Top" Width="164"/>
+                        <Label x:Name="FPSText" Content="0" HorizontalAlignment="Left" Margin="94,72,0,0" VerticalAlignment="Top" Width="164"/>
                     </Grid>
-
                 </Grid>
             </TabItem>
+            <TabItem Header="TabItem" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="54">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
         </TabControl>
-
     </Grid>
 </Window>

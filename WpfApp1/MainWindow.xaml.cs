@@ -36,7 +36,7 @@ namespace WpfApp1
         {
             frameCounter++;
             FrameCounterText.Content = frameCounter;
-            
+
             FPSText.Content = 1000.0 / (stopwatch.Elapsed.TotalMilliseconds - timeSpan);
             //ElapsedTicksText.Content = frameCount / stopwatch.Elapsed.TotalSeconds;
             timeSpan = stopwatch.ElapsedMilliseconds;
@@ -55,11 +55,7 @@ namespace WpfApp1
             Console.WriteLine("OnClick");
         }
 
-        private void WindowOnLoaded(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void StartButtonOnClick(object sender, RoutedEventArgs e) => 
+        private void StartButtonOnClick(object sender, RoutedEventArgs e) =>
             stopwatch.Start();
         private void StopButtonOnClick(object sender, RoutedEventArgs e) =>
             stopwatch.Stop();
